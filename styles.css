@@ -30,25 +30,19 @@ body {
 }
 
 h1 {
+	color: var(--primary-orange);
+	font-size: 3rem;
 	margin-bottom: .75em;
 }
 
 p {
+	font-size: 19px;
 	margin-bottom: 1em;
 	line-height: 1.6;
 }
 
 p:last-child {
 	margin-bottom: 0;
-}
-
-h1 {
-	color: var(--primary-orange);
-	font-size: 3rem;
-}
-
-p {
-	font-size: 19px;
 }
 
 /* header */
@@ -71,6 +65,7 @@ p {
 	color: var(--primary-orange);
 	text-transform: uppercase;
 	font-weight: 700;
+	font-size: 1.5rem;
 }
 
 /* navigation */
@@ -102,10 +97,6 @@ p {
 	align-items: center;
 }
 
-.logo-link {
-	font-size: 1.5rem;
-}
-
 .nav-link {
 	color: var(--primary-orange);
 	text-decoration: none;
@@ -122,7 +113,7 @@ p {
 	color: rgb(245, 245, 245);
 }
 
-nav .active {
+.container .active {
 	color: #fff;
 	border-bottom: 3px solid;
 }
@@ -160,6 +151,51 @@ nav .active {
 	margin-bottom: 1em;
 }
 
+/* footer */
+
+footer {
+	padding: 4rem 0;
+	text-align: center;
+}
+
+footer a {
+	display: inline-block;
+	color: var(--primary-orange);
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 4rem 0;
+}
+
+footer .nav-item {
+	margin: 2rem;
+}
+
+footer .nav-link {
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+}
+
+footer .social-links {
+	margin-top: 2.3rem;
+	font-size: 2rem;
+}
+
+footer .social-links a {
+	margin-right: .25rem;
+	transition: all .25s ease-in-out;
+}
+
+footer .social-links a:hover {
+	color: #fff;
+}
+
+footer .social-link:last-of-type {
+	margin-right: 0;
+}
+
 @media (min-width: 600px) {
 	.open-nav,
 	.close-nav {
@@ -193,7 +229,13 @@ nav .active {
 
 	.container {
 		max-width: 1200px;
+		padding: 0 2em;
 		margin: 0 auto;
+	}
+
+	main .container {
+		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 
 	.intro {
@@ -213,11 +255,52 @@ nav .active {
 	}
 }
 
+@media (min-width: 768px) {
+	/* footer */
+
+	footer {
+		padding: 3em 0;
+	}
+
+	footer .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	footer .nav-item {
+		margin: 1rem;
+	}
+
+	footer .logo-link {
+		margin-bottom: 0;
+	}
+
+	footer .nav-links {
+		display: flex;
+		margin: 0;
+	}
+
+	footer .social-links {
+		margin-top: 0;
+		font-size: 2rem;
+	}
+
+	footer .social-links a {
+		margin-right: .75em;
+	}
+}
+
 @media (min-width: 1000px) {
 	.grid {
 		margin-top: 3rem;
 		grid-template-columns: repeat(3, auto);
 		gap: 2em;
+	}
+
+	footer {
+		/* border-top: 1px solid rgba(255, 255, 255, .5); */
+		/* padding: 5em 0; */
 	}
 }
 
@@ -263,148 +346,6 @@ nav .active {
 
 .img-container:hover .inner-img {
 	transform: scale(1.05);
-}
-
-footer {
-	background-color: var(--primary-dark);
-	color: #d3d3d3;
-	width: 100%;
-	margin-top: auto;
-}
-
-.footer-bottom {
-	padding: 1em;
-	text-align: center;
-}
-
-.footer-container {
-	max-width: 1050px;
-	margin: 0 auto;
-	padding: 3em;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.footer-container > div:nth-of-type(1) {
-	margin-right: 3em;
-}
-
-.footer-container h3 {
-	letter-spacing: 1px;
-	font-size: 1.5em;
-	padding-bottom: .8em;
-	font-weight: bolder;
-}
-
-.footer-container p {
-	font-size: 1em;
-	line-height: 1.5;
-	margin-bottom: 1.5em;
-}
-
-.footer-about p,
-.footer-about > div,
-.footer-about i {
-	opacity: .7;
-}
-
-i {
-	margin-right: .6em;
-}
-
-.social-links a {
-	display: inline-block;
-	width: 41px;
-	height: 41px;
-	margin-right: .3em;
-	margin-top: 1.5em;
-	border: 1px solid white;
-	text-align: center;
-	border-radius: 3px;
-	font-size: 1.3em;
-	padding: .1em .2em;
-	/* border: 1px solid red; */
-}
-
-.social-links i {
-	/* border: 1px solid white; */
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.footer-links ul {
-	padding-left: 2em;
-}
-
-.footer-links ul li {
-	/* padding-left: 2em; */
-	margin-bottom: .4em;
-	opacity: .8;
-	font-size: 1.1;
-}
-
-.phone,
-.email,
-.footer-links ul a {
-	display: block;
-	margin-left: .5em;
-	color: inherit;
-	text-decoration: none;
-	opacity: .8;
-}
-
-.footer-links ul li:hover {
-	transform: translateX(10px);
-}
-
-.phone:hover,
-.email:hover,
-.footer-links ul a:hover {
-	opacity: 1;
-}
-
-input,
-textarea {
-	width: 100%;
-	margin-bottom: 1em;
-	background-color: rgba(19, 19, 19, 0.7);
-	border: 0;
-	padding: .5em 1em;
-	font-family: inherit;
-	font-size: 1.2em;
-	color: rgba(255, 255, 255, .7);
-}
-
-*::placeholder {
-	color: rgba(255, 255, 255, .7);
-	font-family: inherit;
-}
-
-textarea {
-	min-height: 40%;
-	resize: vertical;
-}
-
-input @media(max-width: 700px) {
-	nav {
-		display: none;
-	}
-
-	.menu-toggle {
-		display: block;
-	}
-}
-
-.phone:hover,
-.email:hover {
-	color: white;
-	opacity: 1;
-}
-
-.footer-about a i:hover,
-.footer-links li:hover {
-	color: white;
-	opacity: 1;
 }
 
 /* period page */
