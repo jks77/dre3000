@@ -302,6 +302,10 @@ footer .social-link:last-of-type {
 		/* gap: 1em; */
 	}
 
+	.home .grid {
+		margin-top: 0;
+	}
+
 	footer {
 		/* border-top: 1px solid rgba(255, 255, 255, .5); */
 		/* padding: 5em 0; */
@@ -341,27 +345,27 @@ footer .social-link:last-of-type {
 }
 
 .inner-img.one {
-	background-image: linear-gradient(rgba(0, 0, 0, .01), rgba(0, 0, 0, .01)), url(1a.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(muurlinks.jpg);
 }
 
 .inner-img.one:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(1a.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(muurlinks.jpg);
 }
 
 .inner-img.two {
-	background-image: linear-gradient(rgba(0, 0, 0, .01), rgba(0, 0, 0, .01)), url(2a.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(muurmidden.jpg);
 }
 
 .inner-img.two:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(2a.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(muurmidden.jpg);
 }
 
 .inner-img.three {
-	background-image: linear-gradient(rgba(0, 0, 0, .01), rgba(0, 0, 0, .01)), url(cover\ voorkant\ vierkant.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(muurrechts2.jpg);
 }
 
 .inner-img.three:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(cover\ voorkant\ vierkant.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url(muurrechts2.jpg);
 }
 
 .img-container:hover .inner-img {
