@@ -408,32 +408,38 @@ footer .social-link:last-of-type {
 
 .inner-img.one {
 	background-color: #575558;
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurlinks.jpg);
-	background-position: 0px 3px;
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(1nieuw.jpg); */
+	background-image: url(1nieuw.jpg);
+	/* background-position: 0px 3px; */
 }
 
 .inner-img.one:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurlinks.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(1nieuw.jpg); */
+	background-image: url(1nieuw.jpg);
 }
 
 .inner-img.two {
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurmidden.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(2nieuw.jpg); */
+	background-image: url(2nieuw.jpg);
 }
 
 .inner-img.two:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurmidden.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(2nieuw.jpg); */
+	background-image: url(2nieuw.jpg);
 }
 
 .inner-img.three {
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurrechts2.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(3nieuw.jpg); */
+	background-image: url(3nieuw.jpg);
 }
 
 .inner-img.three:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(muurrechts2.jpg);
+	/* background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .01)), url(3nieuw.jpg); */
+	background-image: url(3nieuw.jpg);
 }
 
 .img-container:hover .inner-img {
-	transform: scale(1.05);
+	transform: scale(1.15);
 }
 
 /* period page */
