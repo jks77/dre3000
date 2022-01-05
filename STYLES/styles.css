@@ -383,8 +383,8 @@ footer .social-link:last-of-type {
 .grid-two-columns {
 	margin-top: 150px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 5em;
+	grid-template-columns: 3fr 1fr;
+	gap: 2em;
 }
 
 .grid-two-columns p,
@@ -439,16 +439,19 @@ p:last-child {
 	color: #000;
 }
 
+.col-two {
+	height: 100%;
+}
+
 .preview {
+	height: 100%;
 	display: flex;
-	align-items: center;
-	margin: 2rem 0 1.25rem;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .preview img {
-	width: 100px;
-	height: 100px;
-	margin-right: 12px;
+	max-width: 90%;
 	opacity: .7;
 	cursor: pointer;
 }
@@ -458,8 +461,6 @@ p:last-child {
 }
 
 .preview .active {
-	width: 100px;
-	height: 100px;
 	border: 3px solid #fff;
 	opacity: 1;
 }

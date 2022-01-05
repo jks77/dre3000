@@ -3,9 +3,12 @@ const openButton = document.querySelector('.open-nav');
 const nav = document.querySelector('.nav');
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
-const thumbnail = document.getElementsByClassName("thumbnail");
+const thumbNail = document.getElementsByClassName("thumbnail");
 const recordImg = document.getElementById("record-img");
 const preview = document.querySelector(".preview");
+const cover = document.querySelector(".cover");
+
+console.log(cover.src);
 
 const records = [
   {
@@ -18,11 +21,15 @@ const records = [
   }
 ]
 
+const coverImg = [
+	"PHOTOS/LPS/cover voorkant vierkant.jpg", 
+	"PHOTOS/LPS/cover achterkant vierkant.jpg"                 
+]
+
 const backgroundImg = [
 	"PHOTOS/LPS/cover voorkant vierkant.jpg", 
 	"PHOTOS/LPS/cover achterkant vierkant.jpg",
-	"PHOTOS/LPS/side 1 record vierkant.jpg",
-	"PHOTOS/LPS/side 2 record vierkant.jpg"                      
+	"PHOTOS/LPS/side 1 record vierkant.jpg"                     
 ]
 
 let counter = 0;
@@ -38,49 +45,54 @@ openButton.addEventListener('click', () => {
 });
 
 
-// functie om op elke thumbnail de class 'active' te verwijderen en op aangeklikte thumnail toe te voegen
+// functie om op elke thumbNail de class 'active' te verwijderen en op aangeklikte thumnail toe te voegen
 
-for(let i = 0; i < (thumbnail.length); i++) {
-	thumbnail[i].addEventListener('click', function() {
-	  for(let i = 0; i < thumbnail.length; i++) {
-	   thumbnail[i].classList.remove("active");      
+for(let i = 0; i < (thumbNail.length); i++) {
+	thumbNail[i].addEventListener('click', function() {
+	  for(let i = 0; i < thumbNail.length; i++) {
+	   thumbNail[i].classList.remove("active");      
     }        
-	  thumbnail[i].classList.add("active");  
+	  thumbNail[i].classList.add("active");  
 	  recordImg.src = `${backgroundImg[i]}`;
     counter = i;
 	})
 }
 
-// functie om met click naar de volgende thumbnail te gaan
+// functie om met click naar de volgende thumbNail te gaan
 
 next.addEventListener("click", function() {
-	console.log(`background ${backgroundImg[counter]}`)
-  if(counter >= 3) {  
-    thumbnail[counter].classList.remove("active");   
+	// console.log(`background ${backgroundImg[counter]}`)
+  console.log(thumbNail);
+  console.log(counter);
+  if(counter >= thumbNail.length-1) {  
+    thumbNail[counter].classList.remove("active");   
     counter = 0;
     recordImg.src = `${backgroundImg[counter]}`;
-    thumbnail[counter].classList.add("active");     
+    thumbNail[counter].classList.add("active");     
     return;
   }
   counter++;
   recordImg.src = `${backgroundImg[counter]}`; 
-  thumbnail[counter].classList.add("active");
-  thumbnail[counter-1].classList.remove("active");
+  thumbNail[counter].classList.add("active");
+  thumbNail[counter-1].classList.remove("active");
 })
 
-// functie om met click een thumbnail terug te gaan
+// functie om met click een thumbNail terug te gaan
 
 prev.addEventListener("click", function() {
+  console.log(thumbNail);
+  console.log(counter);
+  
   if(counter <= 0) {
-    thumbnail[counter].classList.remove("active");  
-    counter = 3;
+    thumbNail[counter].classList.remove("active");  
+    counter = thumbNail.length-1;
     recordImg.src = `${backgroundImg[counter]}`;
-    thumbnail[counter].classList.add("active");
+    thumbNail[counter].classList.add("active");
     return;
   }
   counter--;
   recordImg.src = `${backgroundImg[counter]}`;  
-  thumbnail[counter].classList.add("active");
-  thumbnail[counter+1].classList.remove("active");
+  thumbNail[counter].classList.add("active");
+  thumbNail[counter+1].classList.remove("active");
 })
 
